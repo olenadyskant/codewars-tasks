@@ -3,4 +3,4 @@
 // 2, 5  -->  [2, 4, 16, 256, 65536]
 // 3, 3  -->  [3, 9, 81]
 
-const squares = (x, n) => n<=0 ? [] : [x,...Array(n-1)].map((_, i, arr) => i==0 ? arr[i]=x : arr[i]=Math.pow(arr[i-1], 2));
+const squares = (x, n) => n<=0 ? [] : [...Array(n)].map((_, i, arr) => i==0 ? arr[i]=x : arr[i]=Math.pow(arr[i-1], 2));
